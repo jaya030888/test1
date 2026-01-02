@@ -1,228 +1,351 @@
-/* ========== RESET ========== */
+/* ================= RESET ================= */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 body{
-    overflow-x: hidden;
-    background: linear-gradient(135deg,#f6fff9,#ffffff);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    line-height: 1.6;
 }
 
-/* ========== SCROLL ANIMATION ========== */
-.reveal{
-    opacity: 0;
-    transform: translateY(80px);
-    transition: all 0.9s ease;
-}
-.reveal.active{
-    opacity: 1;
-    transform: translateY(0);
+/* ================= GLOBAL ================= */
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
 }
 
-/* ========== HEADER ========== */
+h1, h2, h3{
+    font-weight: 700;
+}
+
+p{
+    font-size: 1.05rem;
+    color: #4b5563;
+}
+
+span{
+    color: #22C55E;
+    font-weight: 600;
+}
+
+button{
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* ================= HEADER ================= */
 header{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
-    padding: 16px 40px;
+    align-items: center;
+}
+
+header h1{
+    font-size: 1.5rem;
 }
 
 header button{
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 0.6rem 1.6rem;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 header button:hover{
-    transform: scale(1.1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #22C55E;
+    color: white;
 }
 
-/* ========== LANDING ========== */
+/* ================= LANDING ================= */
 .landing{
-    min-height: 90vh;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
 }
 
 #excel{
-    font-size: 150px;
+    font-size: 7rem;
+    font-weight: 800;
+    letter-spacing: -2px;
 }
+
 #practice{
-    font-size: 80px;
-    color:#22C55E;
+    font-size: 3.5rem;
+    color: #22C55E;
+    margin-bottom: 2rem;
+}
+
+.landing h3{
+    font-size: 2.2rem;
+}
+
+.landing p{
+    margin-top: 1.5rem;
 }
 
 .landing button{
-    margin: auto;
-    padding: 30px 60px;
-    border-radius: 50px;
-    font-size: 28px;
-    border: none;
+    margin-top: 3rem;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    border-radius: 999px;
+    background-color: #22C55E;
     color: white;
-    background: linear-gradient(90deg,#00ea56,#00ac48);
-    cursor: pointer;
-    animation: pulse 2.5s infinite;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(0,234,86,.6);}
-    70%{box-shadow:0 0 0 25px rgba(0,234,86,0);}
-    100%{box-shadow:0 0 0 0 rgba(0,234,86,0);}
+.landing button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ========== FEATURES ========== */
+/* ================= FEATURES ================= */
 .Features{
-    max-width: 1200px;
-    margin: 5rem auto;
-    padding: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
+    align-items: center;
 }
 
 .Featur_given h2{
-    color:#00ac48;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
 }
 
-.Features p{
-    font-size: 18px;
+.vdos img{
+    width: 100%;
+    max-width: 420px;
+    border-radius: 14px;
+    display: block;
 }
 
-.Features span{
-    color:#22C55E;
-    font-weight: bold;
-}
-
-/* ========== GLASS CARD ========== */
-.quiz,
-.Review,
-.whats_going{
-    background: rgba(255,255,255,0.35);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    transition: all 0.35s ease;
-}
-
-.quiz:hover,
-.Review:hover,
-.whats_going:hover{
-    transform: translateY(-12px) scale(1.03);
-}
-
-/* ========== JOURNEY ========== */
+/* ================= JOURNEY ================= */
 #journey{
-    padding: 4rem 2rem;
-    background: whitesmoke;
+    background-color: #f9fafb;
+    max-width: none;
+}
+
+#journey h2{
+    text-align: center;
+    font-size: 2.8rem;
 }
 
 #inline{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    justify-content: space-between;
-    margin: 3rem 0;
+    margin-top: 4rem;
 }
 
 .Review{
+    background: white;
+    border-radius: 16px;
     padding: 1.5rem;
     display: flex;
     gap: 1rem;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
 }
 
-/* ========== WHATS GOING ========== */
+.journeyy{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= QUIZ HISTORY ================= */
 .whats_going{
-    margin: 1.5rem 0;
-    padding: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.chapters{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chapters span{
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+.spans span{
+    margin-right: 1.5rem;
+    font-size: 0.9rem;
 }
 
 .whats_going button{
-    border: none;
-    background: none;
-    color:#22C55E;
-    cursor: pointer;
+    margin-top: 0.5rem;
+    color: #22C55E;
+    font-weight: 600;
 }
 
-/* ========== QUIZ OPTIONS ========== */
+/* ================= QUIZ CUSTOMIZE ================= */
+#Costomize_Quiz h2{
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+#demo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.quiz{
+    background: #f9fafb;
+    border-radius: 18px;
+    padding: 2.5rem;
+}
+
+.quiz h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
 .options{
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .option_no,
 .option_time{
-    width: 70px;
+    width: 64px;
     height: 40px;
     border-radius: 10px;
-    border: 2px solid #ccc;
-    cursor: pointer;
-    transition: 0.25s;
+    border: 1px solid #d1d5db;
+    background-color: white;
+    transition: all 0.2s ease;
 }
 
 .option_no:hover,
 .option_time:hover{
-    background: linear-gradient(90deg,#00ea56,#00ac48);
+    background-color: #22C55E;
     color: white;
-    transform: scale(1.15);
-    border: none;
 }
 
-/* ========== UNLIMITED BUTTON ========== */
 .Unlimited-btn{
-    margin: 20px 0;
-    padding: 12px 20px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
+    margin-top: 2rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    background-color: #e5e7eb;
 }
 
-.Unlimited-btn:hover{
-    background:#00ea56;
+/* ================= GUIDED PATHS ================= */
+#Guided_paths h2{
+    text-align: center;
+    font-size: 2.8rem;
 }
 
-/* ========== GET IN TOUCH ========== */
+#Subject_nav{
+    margin: 2.5rem auto;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    width: fit-content;
+}
+
+#Subject_nav button{
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+#Subject_nav button:hover{
+    background-color: #22C55E;
+    color: white;
+}
+
+/* ================= GET IN TOUCH ================= */
 #getintouch{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 4rem;
+    gap: 4rem;
+}
+
+#getintouch h2{
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
 }
 
 form{
-    background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(14px);
-    padding: 2rem;
-    border-radius: 20px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-input,textarea{
-    margin-bottom: 1rem;
-    padding: 10px;
+label{
+    margin-top: 1.2rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+input, textarea{
+    padding: 0.7rem 0.9rem;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #d1d5db;
+    font-family: inherit;
 }
 
-input:focus,textarea:focus{
+input:focus,
+textarea:focus{
     outline: none;
-    border: 2px solid #00ea56;
+    border-color: #22C55E;
 }
 
-/* ========== RESPONSIVE ========== */
-@media(max-width:900px){
-    .Features,#getintouch{
+form button{
+    margin-top: 2rem;
+    padding: 0.9rem;
+    border-radius: 12px;
+    background-color: #22C55E;
+    color: white;
+    font-weight: 600;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    height: 220px;
+    background-color: #111827;
+    margin-top: 6rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px){
+    .Features,
+    #demo,
+    #getintouch{
         grid-template-columns: 1fr;
     }
+
     #inline{
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #excel{
+        font-size: 4.5rem;
     }
 }
+
