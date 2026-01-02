@@ -281,6 +281,19 @@
     <footer>
 
     </footer>
+    <script>
+const reveals = document.querySelectorAll(".Features, #journey, #Costomize_Quiz, #Guided_paths, #getintouch");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("reveal","active");
+    }
+  });
+});
+</script>
+
 </body>
 </html>
 
